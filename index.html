@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiservice Bienes Raíces - Honduras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Multiservice</h2>
+                    <span>Bienes Raíces</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#propiedades">Propiedades</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Encuentra tu hogar ideal en Honduras</h1>
+            <p>Más de 15 años conectando familias con sus sueños inmobiliarios</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Ver Propiedades</button>
+                <button class="btn btn-secondary">Contactar Asesor</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Filters -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-card">
+                <h3>Busca tu propiedad ideal</h3>
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label>Tipo de Propiedad</label>
+                        <select id="tipoPropiedad">
+                            <option value="">Todos</option>
+                            <option value="casa">Casa</option>
+                            <option value="apartamento">Apartamento</option>
+                            <option value="terreno">Terreno</option>
+                            <option value="comercial">Comercial</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Precio Máximo</label>
+                        <select id="precioMax">
+                            <option value="">Sin límite</option>
+                            <option value="50000">$50,000</option>
+                            <option value="100000">$100,000</option>
+                            <option value="200000">$200,000</option>
+                            <option value="500000">$500,000</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Ubicación</label>
+                        <select id="ubicacion">
+                            <option value="">Todas</option>
+                            <option value="tegucigalpa">Tegucigalpa</option>
+                            <option value="san-pedro-sula">San Pedro Sula</option>
+                            <option value="la-ceiba">La Ceiba</option>
+                            <option value="choloma">Choloma</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Habitaciones</label>
+                        <select id="habitaciones">
+                            <option value="">Cualquiera</option>
+                            <option value="1">1+</option>
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary search-btn" onclick="filtrarPropiedades()">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="propiedades" class="properties">
+        <div class="container">
+            <div class="section-header">
+                <h2>Propiedades Destacadas</h2>
+                <p>Descubre las mejores oportunidades inmobiliarias en Honduras</p>
+            </div>
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Properties will be loaded here by JavaScript -->
+            </div>
+            <div class="load-more">
+                <button class="btn btn-outline" onclick="cargarMasPropiedades()">Ver más propiedades</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Soluciones integrales para todas tus necesidades inmobiliarias</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Venta de Propiedades</h3>
+                    <p>Amplio catálogo de casas, apartamentos y terrenos en las mejores ubicaciones de Honduras.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Alquiler</h3>
+                    <p>Opciones de alquiler residencial y comercial con contratos flexibles y precios competitivos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Inversión Inmobiliaria</h3>
+                    <p>Asesoría especializada para maximizar tu inversión en el mercado inmobiliario hondureño.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Asesoría Legal</h3>
+                    <p>Acompañamiento completo en todos los procesos legales de compra y venta de propiedades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Más de 15 años de experiencia</h2>
+                    <p>En Multiservice Bienes Raíces nos especializamos en brindar soluciones inmobiliarias integrales en Honduras. Nuestro equipo de profesionales altamente capacitados te acompañará en cada paso del proceso.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Propiedades Vendidas</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Clientes Satisfechos</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Años de Experiencia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Equipo Multiservice Bienes Raíces">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para ayudarte a encontrar tu propiedad ideal</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Col. Palmira, Tegucigalpa M.D.C.<br>Honduras, C.A.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+504 2234-5678<br>+504 9876-5432</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>avusahn@gmail.com<br>info@multiservicebienesraices.hn</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xpznvqko" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="tipo_consulta" required>
+                            <option value="">Tipo de consulta</option>
+                            <option value="compra">Compra de propiedad</option>
+                            <option value="venta">Venta de propiedad</option>
+                            <option value="alquiler">Alquiler</option>
+                            <option value="inversion">Inversión</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    <div class="contact-alternatives">
+                        <p>O contáctanos directamente:</p>
+                        <div class="alternative-buttons">
+                            <button type="button" class="btn btn-outline" onclick="abrirWhatsApp()">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
+                            <button type="button" class="btn btn-outline" onclick="abrirEmail()">
+                                <i class="fas fa-envelope"></i> Email Directo
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Multiservice Bienes Raíces</h3>
+                    <p>Tu socio de confianza en bienes raíces en Honduras. Conectamos sueños con realidades.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#propiedades">Propiedades</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Venta de Propiedades</a></li>
+                        <li><a href="#">Alquiler</a></li>
+                        <li><a href="#">Inversión</a></li>
+                        <li><a href="#">Asesoría Legal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +504 2234-5678</p>
+                    <p><i class="fas fa-envelope"></i> avusahn@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tegucigalpa, Honduras</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Multiservice Bienes Raíces. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
