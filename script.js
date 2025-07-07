@@ -704,8 +704,8 @@ ${appointmentNotes ? `Notas adicionales: ${appointmentNotes}` : ''}
 
 ---
 Multiservice Bienes Raíces
-Tel: +504 2234-5678
-Email: avusahn@gmail.com
+Tel: +504 9895-6357
+Email: multiservicebienesraices@gmail.com
     `.trim();
     
     const eventLocation = 'Tegucigalpa, Honduras (Ubicación específica por confirmar)';
@@ -789,7 +789,7 @@ Este mensaje fue generado automáticamente desde el sitio web.
 Multiservice Bienes Raíces - Sistema de Citas
     `.trim();
     
-    const mailtoLink = `mailto:avusahn@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+    const mailtoLink = `mailto:multiservicebienesraices@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
     
     // Abrir cliente de correo en segundo plano
     const iframe = document.createElement('iframe');
@@ -1002,7 +1002,7 @@ function enviarEmailConEmailJS(nombre, email, telefono, tipoConsulta, mensaje, s
         phone: telefono,
         inquiry_type: tipoConsulta,
         message: mensaje,
-        to_email: 'avusahn@gmail.com',
+        to_email: 'multiservicebienesraices@gmail.com',
         reply_to: email
     };
     
@@ -1073,7 +1073,7 @@ Saludos cordiales,
 ${nombre}
     `.trim();
     
-    const mailtoLink = `mailto:avusahn@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+    const mailtoLink = `mailto:multiservicebienesraices@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
     
     // Abrir cliente de correo
     window.location.href = mailtoLink;
@@ -1146,7 +1146,7 @@ Hola! Soy ${nombre} y me interesa ${tipoTexto[tipoConsulta] || tipoConsulta}.
 
 // Funciones para botones alternativos de contacto
 function abrirWhatsApp() {
-    const numeroWhatsApp = '50498765432'; // Cambia por tu número real
+    const numeroWhatsApp = '50498956357'; // Cambia por tu número real
     const mensaje = 'Hola Multiservice Bienes Raíces, me interesa conocer más sobre sus propiedades disponibles.';
     const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(whatsappURL, '_blank');
@@ -1164,7 +1164,7 @@ Por favor, contáctenme para coordinar una cita.
 Saludos cordiales.
     `.trim();
     
-    const mailtoLink = `mailto:avusahn@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+    const mailtoLink = `mailto:multiservicebienesraices@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
     window.location.href = mailtoLink;
 }
 
