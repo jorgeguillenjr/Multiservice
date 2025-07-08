@@ -2,22 +2,27 @@
 const propiedades = [
     {
         id: 1,
-        titulo: "Casa Moderna en Tegucigalpa",
+        titulo: "Casa Moderna Las Uvas - 101",
         ubicacion: "tegucigalpa",
         precio: 180000,
         tipo: "casa",
         habitaciones: 3,
         banos: 2,
         area: 180,
-        imagen: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800",
+        imagen: "./medios/casas/101/1.jpeg",
         imagenes: [
-            "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
+            "./medios/casas/101/1.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/2.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/3.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/4.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/5.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/6.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/7.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/8.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/9.jpeg?auto=compress&cs=tinysrgb&w=800"
         ],
         videos: [
-            "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+            "./medios/casas/101/10.mp4"
         ],
         descripcion: "Hermosa casa moderna con acabados de lujo en zona residencial exclusiva.",
         descripcionCompleta: "Esta espectacular casa moderna cuenta con acabados de primera calidad, amplios espacios y una ubicación privilegiada en una de las zonas más exclusivas de Tegucigalpa. Perfecta para familias que buscan comodidad y elegancia.",
@@ -25,45 +30,58 @@ const propiedades = [
     },
     {
         id: 2,
-        titulo: "Apartamento Ejecutivo",
+        titulo: "Apartamento Ejecutivo - 201",
         ubicacion: "san-pedro-sula",
         precio: 95000,
         tipo: "apartamento",
         habitaciones: 2,
         banos: 2,
         area: 85,
-        imagen: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800",
+        imagen: "./medios/apartamentos/201/1.jpg?auto=compress&cs=tinysrgb&w=800",
         imagenes: [
-            "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800"
+            "./medios/apartamentos/201/1.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/2.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/3.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/4.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/5.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/6.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/7.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/8.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/9.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/10.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/11.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/apartamentos/201/12.jpg?auto=compress&cs=tinysrgb&w=800"
         ],
         videos: [
             "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4"
         ],
         descripcion: "Moderno apartamento en el corazón de San Pedro Sula con todas las comodidades.",
         descripcionCompleta: "Apartamento ejecutivo completamente equipado en el centro de San Pedro Sula. Ideal para profesionales que buscan comodidad y ubicación estratégica cerca de centros comerciales y oficinas.",
-        caracteristicas: ["Gimnasio", "Seguridad 24/7", "Balcón"]
+        caracteristicas: ["Gimnasio", "Seguridad 24/7", "Balcón", "Piscina"]
     },
     {
         id: 3,
-        titulo: "Terreno Comercial",
-        ubicacion: "la-ceiba",
-        precio: 75000,
+        titulo: "Terreno Comercial - 401",
+        ubicacion: "tegucigalpa",
+        precio: 3125674,
         tipo: "terreno",
         habitaciones: 0,
         banos: 0,
-        area: 500,
-        imagen: "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=800",
+        area: 15628.38,
+        imagen: "./medios/terrenos/401/1.jpg?auto=compress&cs=tinysrgb&w=800",
         imagenes: [
-            "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=800"
+            "./medios/terrenos/401/1.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/terrenos/401/2.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/terrenos/401/3.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/terrenos/401/4.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/terrenos/401/5.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/terrenos/401/6.jpg?auto=compress&cs=tinysrgb&w=800"
         ],
         videos: [
             "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4"
         ],
-        descripcion: "Excelente terreno comercial en zona de alto tráfico, ideal para inversión.",
-        descripcionCompleta: "Terreno comercial estratégicamente ubicado en una de las avenidas principales de La Ceiba. Perfecto para desarrollo comercial o inversión a largo plazo con alto potencial de crecimiento.",
+        descripcion: "¡OPORTUNIDAD DE INVERSIÓN! Venta de Terreno Comercial Con Facil Acceso al Anillo Periférico",
+        descripcionCompleta: "Terreno comercial estratégicamente ubicado en una de las avenidas principales de Tegucigalpa. Perfecto para desarrollo comercial o inversión a largo plazo con alto potencial de crecimiento.",
         caracteristicas: ["Esquinero", "Servicios básicos", "Documentos al día"]
     },
     {

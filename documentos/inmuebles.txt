@@ -1,0 +1,31 @@
+----- FORMULAS Y PRUEBAS DEL TEXTO PARA LOS INMUEBLES
+        id: 1,
+        titulo: "Casa Moderna en Tegucigalpa",
+        ubicacion: "Tegucigalpa",
+        precio: 180000,
+        tipo: "casa",
+        habitaciones: 3,
+        banos: 2,
+        area: 180,
+        imagen: "./medios/casas/101/1.jpeg",
+
+id: 1,
+titulo: "Casa Moderna en Tegucigalpa",
+ubicacion: "Tegucigalpa",
+precio: 180000,
+tipo: "casa",
+habitaciones: 3,
+banos: 2,
+area: 180,
+imagen: "./medios/casas/101/1.jpeg",
+
+=CONCAT(
+HEADER!A2;DETALLES!A2;HEADER!J2;HEADER!T2;
+HEADER!B2;HEADER!S2;DETALLES!B2;HEADER!S2;HEADER!K2;HEADER!T2;
+HEADER!C2;HEADER!S2;DETALLES!C2;HEADER!S2;HEADER!K2;HEADER!T2;
+HEADER!D2;DETALLES!D2;HEADER!J2;HEADER!T2;
+HEADER!E2;HEADER!S2;DETALLES!E2;HEADER!S2;HEADER!K2;HEADER!T2;
+HEADER!F2;DETALLES!F2;HEADER!O2;HEADER!T2;
+HEADER!G2;DETALLES!G2;HEADER!P2;HEADER!T2;
+HEADER!H2;DETALLES!H2;HEADER!Q2;HEADER!T2;
+HEADER!I2;S2;DETALLES!I2;"1";DETALLES!L2;HEADER!S2;HEADER!R2)
