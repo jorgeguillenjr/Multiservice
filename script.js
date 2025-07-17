@@ -166,6 +166,7 @@ const navMenu = document.querySelector('.nav-menu');
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     cargarPropiedades();
+    cargarServicios();
     initializeNavigation();
     initializeContactForm();
     initializeScrollEffects();
