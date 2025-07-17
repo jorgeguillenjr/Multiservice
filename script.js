@@ -1339,6 +1339,49 @@ function initializeScrollEffects() {
     });
 }
 
+// Navigate to specific service
+function navigateToService(serviceType) {
+    // Scroll to services section
+    const servicesSection = document.getElementById('servicios');
+    if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+        
+        // Wait for scroll to complete, then highlight the specific service
+        setTimeout(() => {
+            highlightService(serviceType);
+        }, 800);
+    }
+}
+
+// Highlight specific service card
+function highlightService(serviceType) {
+    // Remove any existing highlights
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.classList.remove('highlighted');
+    });
+    
+    // Map service types to card indices
+    const serviceMap = {
+        'venta': 0,      // Venta de Propiedades
+        'alquiler': 1,   // Alquiler
+        'inversion': 2,  // Inversión Inmobiliaria
+        'asesoria': 3    // Asesoría Legal
+    };
+    
+    const cardIndex = serviceMap[serviceType];
+    if (cardIndex !== undefined) {
+        const serviceCards = document.querySelectorAll('.service-card');
+        if (serviceCards[cardIndex]) {
+            serviceCards[cardIndex].classList.add('highlighted');
+            
+            // Remove highlight after 3 seconds
+            setTimeout(() => {
+                serviceCards[cardIndex].classList.remove('highlighted');
+            }, 3000);
+        }
+    }
+}
+
 // Hero button functionality
 document.addEventListener('DOMContentLoaded', function() {
     const verPropiedadesBtn = document.querySelector('.hero-buttons .btn-primary');
