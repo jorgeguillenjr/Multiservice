@@ -166,7 +166,6 @@ const navMenu = document.querySelector('.nav-menu');
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     cargarPropiedades();
-    cargarServicios();
     initializeNavigation();
     initializeContactForm();
     initializeScrollEffects();
@@ -1030,6 +1029,253 @@ function initializeContactForm() {
         // Usar Mailto como método principal
         enviarEmailConMailto(nombre, email, telefono, tipoConsulta, mensaje, submitBtn, originalText);
     });
+}
+
+// Función para cargar servicios
+function cargarServicios() {
+    const grid = document.getElementById('servicesGrid');
+    if (!grid) return;
+    
+    mostrarServicios();
+    configurarFiltrosServicios();
+}
+
+// Función para mostrar servicios
+function mostrarServicios() {
+    const grid = document.getElementById('servicesGrid');
+    const pagination = document.getElementById('servicesPagination');
+    
+    if (!grid || !pagination) return;
+    
+    // Calcular servicios para la página actual
+    const inicio = (paginaActualServicios - 1) * serviciosPorPagina;
+    const fin = inicio + serviciosPorPagina;
+    const serviciosPagina = serviciosFiltrados.slice(inicio, fin);
+    
+    // Limpiar grid
+    grid.innerHTML = '';
+    
+    // Crear cards de servicios
+    serviciosPagina.forEach(servicio => {
+        const card = document.createElement('div');
+        card.className = 'service-card';
+        card.innerHTML = `
+            <div class="service-card-image">
+                <img src="${servicio.imagen}" alt="${servicio.titulo}" loading="lazy">
+                <div class="service-card-overlay">
+                    <div class="service-card-content">
+                        <i class="${servicio.icono} service-card-icon"></i>
+                        <h3>${servicio.titulo}</h3>
+                        <p>${servicio.descripcion}</p>
+                    </div>
+                </div>
+                <div class="service-card-category">${getCategoryName(servicio.categoria)}</div>
+                <div class="service-card-price">${servicio.precio}</div>
+            </div>
+        `;
+        
+        // Agregar evento click
+        card.addEventListener('click', () => {
+            mostrarDetalleServicio(servicio);
+        });
+        
+        grid.appendChild(card);
+    });
+    
+    // Rellenar espacios vacíos si es necesario
+    const espaciosVacios = serviciosPorPagina - serviciosPagina.length;
+    for (let i = 0; i < espaciosVacios; i++) {
+        const espacioVacio = document.createElement('div');
+        espacioVacio.className = 'service-card-empty';
+        espacioVacio.style.visibility = 'hidden';
+        grid.appendChild(espacioVacio);
+    }
+    
+    // Actualizar paginación
+    actualizarPaginacionServicios();
+}
+
+// Función para configurar filtros de servicios
+function configurarFiltrosServicios() {
+    const filtros = document.querySelectorAll('.service-filter-btn');
+    
+    filtros.forEach(filtro => {
+        filtro.addEventListener('click', () => {
+            // Remover clase active de todos los filtros
+            filtros.forEach(f => f.classList.remove('active'));
+            
+            // Agregar clase active al filtro seleccionado
+            filtro.classList.add('active');
+            
+            // Obtener categoría seleccionada
+            const categoria = filtro.dataset.category;
+            categoriaActiva = categoria;
+            
+            // Filtrar servicios
+            if (categoria === 'all') {
+                serviciosFiltrados = [...serviciosData];
+            } else {
+                serviciosFiltrados = serviciosData.filter(servicio => servicio.categoria === categoria);
+            }
+            
+            // Resetear a primera página
+            paginaActualServicios = 1;
+            
+            // Mostrar servicios filtrados
+            mostrarServicios();
+        });
+    });
+}
+
+// Función para actualizar paginación de servicios
+function actualizarPaginacionServicios() {
+    const pagination = document.getElementById('servicesPagination');
+    if (!pagination) return;
+    
+    const totalPaginas = Math.ceil(serviciosFiltrados.length / serviciosPorPagina);
+    
+    if (totalPaginas <= 1) {
+        pagination.innerHTML = '';
+        return;
+    }
+    
+    let paginationHTML = '';
+    
+    // Botón anterior
+    paginationHTML += `
+        <button class="pagination-btn ${paginaActualServicios === 1 ? 'disabled' : ''}" 
+                onclick="cambiarPaginaServicios(${paginaActualServicios - 1})"
+                ${paginaActualServicios === 1 ? 'disabled' : ''}>
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    `;
+    
+    // Números de página
+    for (let i = 1; i <= totalPaginas; i++) {
+        if (i === 1 || i === totalPaginas || (i >= paginaActualServicios - 1 && i <= paginaActualServicios + 1)) {
+            paginationHTML += `
+                <button class="pagination-btn ${i === paginaActualServicios ? 'active' : ''}" 
+                        onclick="cambiarPaginaServicios(${i})">
+                    ${i}
+                </button>
+            `;
+        } else if (i === paginaActualServicios - 2 || i === paginaActualServicios + 2) {
+            paginationHTML += '<span class="pagination-dots">...</span>';
+        }
+    }
+    
+    // Botón siguiente
+    paginationHTML += `
+        <button class="pagination-btn ${paginaActualServicios === totalPaginas ? 'disabled' : ''}" 
+                onclick="cambiarPaginaServicios(${paginaActualServicios + 1})"
+                ${paginaActualServicios === totalPaginas ? 'disabled' : ''}>
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    `;
+    
+    // Información de página
+    paginationHTML += `
+        <div class="pagination-info">
+            Página ${paginaActualServicios} de ${totalPaginas}
+        </div>
+    `;
+    
+    pagination.innerHTML = paginationHTML;
+}
+
+// Función para cambiar página de servicios
+function cambiarPaginaServicios(nuevaPagina) {
+    const totalPaginas = Math.ceil(serviciosFiltrados.length / serviciosPorPagina);
+    
+    if (nuevaPagina < 1 || nuevaPagina > totalPaginas) return;
+    
+    paginaActualServicios = nuevaPagina;
+    mostrarServicios();
+    
+    // Scroll suave a la sección de servicios
+    document.getElementById('servicios').scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+// Función para obtener nombre de categoría
+function getCategoryName(categoria) {
+    const nombres = {
+        'venta': 'Venta',
+        'alquiler': 'Alquiler',
+        'inversion': 'Inversión'
+    };
+    return nombres[categoria] || categoria;
+}
+
+// Función para mostrar detalle de servicio
+function mostrarDetalleServicio(servicio) {
+    // Crear modal similar al de propiedades pero adaptado para servicios
+    const modal = document.createElement('div');
+    modal.className = 'modal-overlay';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>${servicio.titulo}</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="main-image">
+                        <img src="${servicio.imagen}" alt="${servicio.titulo}">
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <div class="property-info">
+                        <div class="price-badge">${servicio.precio}</div>
+                        <div class="property-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-tag"></i>
+                                <span>Categoría: ${getCategoryName(servicio.categoria)}</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="${servicio.icono}"></i>
+                                <span>Tipo de Servicio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="property-description">
+                        <h3>Descripción</h3>
+                        <p>${servicio.descripcion}</p>
+                        <p>Este servicio forma parte de nuestra amplia gama de soluciones inmobiliarias. 
+                        Contáctanos para obtener más información y asesoría personalizada.</p>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="abrirWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                    </button>
+                    <button class="btn btn-outline" onclick="abrirEmail()">
+                        <i class="fas fa-envelope"></i> Enviar Email
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Agregar eventos
+    const closeBtn = modal.querySelector('.modal-close');
+    closeBtn.addEventListener('click', () => {
+        document.body.removeChild(modal);
+        document.body.style.overflow = 'auto';
+    });
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Mostrar modal
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
 }
 
 // Opción 1: Envío con EmailJS (Servicio gratuito y confiable)
