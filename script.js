@@ -184,6 +184,30 @@ function initializeNavigation() {
         });
     });
 
+    // Handle dropdown menu in mobile
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const navDropdown = document.querySelector('.nav-dropdown');
+    
+    if (dropdownToggle && navDropdown) {
+        dropdownToggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                navDropdown.classList.toggle('active');
+            }
+        });
+    }
+
+    // Handle service navigation
+    document.querySelectorAll('[data-service]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const serviceType = this.getAttribute('data-service');
+            navigateToService(serviceType);
+            navMenu.classList.remove('active');
+            navDropdown.classList.remove('active');
+        });
+    });
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
