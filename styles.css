@@ -920,38 +920,10 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .service-filters {
-        gap: 0.5rem;
-    }
-    
-    .service-filter-btn {
-        padding: 10px 16px;
-        font-size: 0.9rem;
-        min-width: 100px;
-    }
-    
-    .services-grid-carousel {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        gap: 1rem;
-        min-height: 800px;
-    }
-    
-    .service-card {
-        height: 180px;
-    }
-    
-    .service-card h3 {
-        font-size: 1rem;
-    }
-    
-    .service-card p {
-        font-size: 0.8rem;
-    }
-    
-    .pagination-info {
-        font-size: 0.8rem;
-        margin: 0 0.5rem;
+    .services-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: none;
     }
 
     .about-content {
@@ -1021,39 +993,6 @@ body {
 
     .property-card {
         margin: 0 10px;
-    }
-    
-    .service-filters {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.75rem;
-    }
-    
-    .service-filter-btn {
-        width: 100%;
-        max-width: 200px;
-    }
-    
-    .services-grid-carousel {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(16, 1fr);
-        gap: 1rem;
-        min-height: 1600px;
-    }
-    
-    .service-card {
-        height: 160px;
-    }
-    
-    .services-pagination {
-        flex-wrap: wrap;
-        gap: 0.25rem;
-    }
-    
-    .pagination-btn {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-        min-width: 40px;
     }
     
     .contact-logo {
