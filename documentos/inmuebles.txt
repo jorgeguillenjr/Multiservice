@@ -1,4 +1,8 @@
------ FORMULAS Y PRUEBAS DEL TEXTO PARA LOS INMUEBLES
+-- ****************************************************************************
+-- FORMULAS Y PRUEBAS DEL TEXTO PARA LOS INMUEBLES
+-- ****************************************************************************
+-- HEADER
+-- ****************************************************************************
         id: 1,
         titulo: "Casa Moderna en Tegucigalpa",
         ubicacion: "Tegucigalpa",
@@ -29,3 +33,75 @@ HEADER!F2;DETALLES!F2;HEADER!O2;HEADER!T2;
 HEADER!G2;DETALLES!G2;HEADER!P2;HEADER!T2;
 HEADER!H2;DETALLES!H2;HEADER!Q2;HEADER!T2;
 HEADER!I2;S2;DETALLES!I2;"1";DETALLES!L2;HEADER!S2;HEADER!R2)
+
+-- ****************************************************************************
+-- MIDDLE
+-- ****************************************************************************
+		imagenes: [
+            "./medios/casas/101/1.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/2.jpeg?auto=compress&cs=tinysrgb&w=800",
+	        "./medios/casas/101/3.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/4.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/5.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/6.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/7.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/8.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/casas/101/9.jpeg?auto=compress&cs=tinysrgb&w=800"
+        ],
+        videos: [
+            "./medios/casas/101/10.mp4"
+        ],
+		
+		imagenes: [
+			"./medios/casas/101/1.jpeg?auto=compress&cs=tinysrgb&w=800",
+			"./medios/casas/101/2.jpeg?auto=compress&cs=tinysrgb&w=800",
+			"./medios/casas/101/3.jpeg?auto=compress&cs=tinysrgb&w=800",
+			"./medios/casas/101/4.jpeg?auto=compress&cs=tinysrgb&w=800",
+			"./medios/casas/101/5.jpeg?auto=compress&cs=tinysrgb&w=800",
+			"./medios/casas/101/6.jpeg?auto=compress&cs=tinysrgb&w=800",
+			"./medios/casas/101/7.jpeg?auto=compress&cs=tinysrgb&w=800",
+			"./medios/casas/101/8.jpeg?auto=compress&cs=tinysrgb&w=800",
+			"./medios/casas/101/9.jpeg?auto=compress&cs=tinysrgb&w=800",
+		],
+		videos: [
+			"./medios/casas/101/1.mp4"
+		],
+
+		
+		
+
+
+
+=CONCAT(MIDDLE!AC2;DETALLES!I2;"1";DETALLES!L2;DETALLES!J2;MIDDLE!AC2;MIDDLE!P2)
+=CONCAT(MIDDLE!AC2;DETALLES!I2;"2";DETALLES!L2;DETALLES!J2;MIDDLE!AC2;MIDDLE!P2)
+=CONCAT(MIDDLE!AC2;DETALLES!I2;"3";DETALLES!L2;DETALLES!J2;MIDDLE!AC2;MIDDLE!P2)
+=CONCAT(MIDDLE!AC2;DETALLES!I2;"4";DETALLES!L2;DETALLES!J2;MIDDLE!AC2;MIDDLE!P2)
+=CONCAT(MIDDLE!AC2;DETALLES!I2;"5";DETALLES!L2;DETALLES!J2;MIDDLE!AC2;MIDDLE!P2)
+=CONCAT(MIDDLE!AC2;DETALLES!I2;"6";DETALLES!L2;DETALLES!J2;MIDDLE!AC2;MIDDLE!P2)
+=CONCAT(MIDDLE!AC2;DETALLES!I2;"7";DETALLES!L2;DETALLES!J2;MIDDLE!AC2;MIDDLE!P2)
+=CONCAT(MIDDLE!AC2;DETALLES!I2;"8";DETALLES!L2;DETALLES!J2;MIDDLE!AC2;MIDDLE!P2)
+=CONCAT(MIDDLE!AC2;DETALLES!I2;"9";DETALLES!L2;DETALLES!J2;MIDDLE!AC2;MIDDLE!P2)
+
+
+
+-- ****************************************************************************
+-- FOOTER
+-- ****************************************************************************
+		descripcion: "Hermosa casa moderna con acabados de lujo en zona residencial exclusiva.",
+        descripcionCompleta: "Esta espectacular casa moderna cuenta con acabados de primera calidad, amplios espacios y una ubicación privilegiada en una de las zonas más exclusivas de Tegucigalpa. Perfecta para familias que buscan comodidad y elegancia.",
+        caracteristicas: ["Piscina", "Jardín", "Garaje"]
+		
+		descripcion: "Hermosa casa moderna con acabados de lujo en zona residencial exclusiva.",
+		descripcionCompleta: "Esta espectacular casa moderna cuenta con acabados de primera calidad, amplios espacios y una ubicación privilegiada en una de las zonas más exclusivas de Tegucigalpa. Perfecta para familias que buscan comodidad y elegancia.",
+		caracteristicas: ["Piscina","jardin","Garaje"]
+
+descripcion: "Hermosa casa moderna con acabados de lujo en zona residencial exclusiva.",
+descripcionCompleta: "Esta espectacular casa moderna cuenta con acabados de primera calidad, amplios espacios y una ubicación privilegiada en una de las zonas más exclusivas de Tegucigalpa. Perfecta para familias que buscan comodidad y elegancia.",
+caracteristicas: ["Piscina","jardin","Garaje"]
+
+
+=CONCAT(DETALLES!P1;FOOTER!I2;FOOTER!E2;DETALLES!P2;FOOTER!F2;FOOTER!E2;FOOTER!D2)
+=CONCAT(DETALLES!Q1;FOOTER!I2;FOOTER!E2;DETALLES!Q2;FOOTER!F2;FOOTER!E2;FOOTER!D2)
+=CONCAT(DETALLES!R1;FOOTER!I2;FOOTER!E2;DETALLES!R2;FOOTER!F2;FOOTE
+R!E2;FOOTER!D2)
+
