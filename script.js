@@ -125,10 +125,15 @@ const propiedades = [
         habitaciones: 0,
         banos: 2,
         area: 150,
-        imagen: "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=800",
+        imagen: "./medios/5 - oficinas/501/1.jpg?auto=compress&cs=tinysrgb&w=800",
         imagenes: [
-            "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=800"
+            "./medios/5 - oficinas/501/1.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/5 - oficinas/501/2.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/5 - oficinas/501/3.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/5 - oficinas/501/4.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/5 - oficinas/501/5.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/5 - oficinas/501/6.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/5 - oficinas/501/7.jpg?auto=compress&cs=tinysrgb&w=800"
         ],
         videos: [
             "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4"
@@ -146,11 +151,15 @@ const propiedades = [
         habitaciones: 3,
         banos: 2,
         area: 95,
-        imagen: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
+        imagen: "./medios/6 - propiedadesrurales/601/1.jpg?auto=compress&cs=tinysrgb&w=800",
         imagenes: [
-            "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800"
+            "./medios/6 - propiedadesrurales/601/1.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/6 - propiedadesrurales/601/2.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/6 - propiedadesrurales/601/3.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/6 - propiedadesrurales/601/4.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/6 - propiedadesrurales/601/5.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/6 - propiedadesrurales/601/6.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/6 - propiedadesrurales/601/7.jpg?auto=compress&cs=tinysrgb&w=800"
         ],
         videos: [
             "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
