@@ -9,20 +9,20 @@ const propiedades = [
         habitaciones: 3,
         banos: 2,
         area: 180,
-        imagen: "./medios/casas/101/1.jpeg",
+        imagen: "./medios/1 - casas/101/1.jpeg",
         imagenes: [
-            "./medios/casas/101/1.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/casas/101/2.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/casas/101/3.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/casas/101/4.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/casas/101/5.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/casas/101/6.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/casas/101/7.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/casas/101/8.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/casas/101/9.jpeg?auto=compress&cs=tinysrgb&w=800"
+            "./medios/1 - casas/101/1.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/1 - casas/101/2.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/1 - casas/101/3.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/1 - casas/101/4.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/1 - casas/101/5.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/1 - casas/101/6.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/1 - casas/101/7.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/1 - casas/101/8.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/1 - casas/101/9.jpeg?auto=compress&cs=tinysrgb&w=800"
         ],
         videos: [
-            "./medios/casas/101/10.mp4"
+            "./medios/1 - casas/101/10.mp4"
         ],
         descripcion: "Hermosa casa moderna con acabados de lujo en zona residencial exclusiva.",
         descripcionCompleta: "Esta espectacular casa moderna cuenta con acabados de primera calidad, amplios espacios y una ubicación privilegiada en una de las zonas más exclusivas de Tegucigalpa. Perfecta para familias que buscan comodidad y elegancia.",
@@ -37,20 +37,20 @@ const propiedades = [
         habitaciones: 2,
         banos: 2,
         area: 85,
-        imagen: "./medios/apartamentos/201/1.jpg?auto=compress&cs=tinysrgb&w=800",
+        imagen: "./medios/2 - apartamentos/201/1.jpg?auto=compress&cs=tinysrgb&w=800",
         imagenes: [
-            "./medios/apartamentos/201/1.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/2.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/3.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/4.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/5.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/6.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/7.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/8.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/9.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/10.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/11.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/apartamentos/201/12.jpg?auto=compress&cs=tinysrgb&w=800"
+            "./medios/2 - apartamentos/201/1.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/2.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/3.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/4.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/5.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/6.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/7.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/8.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/9.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/10.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/11.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/2 - apartamentos/201/12.jpg?auto=compress&cs=tinysrgb&w=800"
         ],
         videos: [
             "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4"
@@ -61,21 +61,21 @@ const propiedades = [
     },
     {
         id: 3,
-        titulo: "Terreno Comercial - 401",
+        titulo: "Terreno Comercial - 301",
         ubicacion: "tegucigalpa",
         precio: 3125674,
         tipo: "terreno",
         habitaciones: 0,
         banos: 0,
         area: 15628.38,
-        imagen: "./medios/terrenos/401/1.jpg?auto=compress&cs=tinysrgb&w=800",
+        imagen: "./medios/3 - terrenos/301/1.jpg?auto=compress&cs=tinysrgb&w=800",
         imagenes: [
-            "./medios/terrenos/401/1.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/terrenos/401/2.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/terrenos/401/3.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/terrenos/401/4.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/terrenos/401/5.jpg?auto=compress&cs=tinysrgb&w=800",
-            "./medios/terrenos/401/6.jpg?auto=compress&cs=tinysrgb&w=800"
+            "./medios/3 - terrenos/301/1.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/3 - terrenos/301/2.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/3 - terrenos/301/3.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/3 - terrenos/301/4.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/3 - terrenos/301/5.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/3 - terrenos/301/6.jpg?auto=compress&cs=tinysrgb&w=800"
         ],
         videos: [
             "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4"
@@ -86,20 +86,27 @@ const propiedades = [
     },
     {
         id: 4,
-        titulo: "Casa de Playa",
+        titulo: "Casa de Playa - 401",
         ubicacion: "la-ceiba",
         precio: 250000,
-        tipo: "casa",
+        tipo: "playa",
         habitaciones: 4,
         banos: 3,
         area: 220,
-        imagen: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
+        imagen: "./medios/4 - casasplaya/401/1.jpg?auto=compress&cs=tinysrgb&w=800",    
         imagenes: [
-            "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
-            "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=800"
+            "./medios/4 - casasplaya/401/1.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/2.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/3.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/4.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/5.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/6.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/7.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/8.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/9.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/10.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/11.jpg?auto=compress&cs=tinysrgb&w=800",
+            "./medios/4 - casasplaya/401/12.jpg?auto=compress&cs=tinysrgb&w=800"   
         ],
         videos: [
             "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
@@ -111,10 +118,10 @@ const propiedades = [
     },
     {
         id: 5,
-        titulo: "Oficina Comercial",
+        titulo: "Oficina Comercial - 501",
         ubicacion: "tegucigalpa",
         precio: 120000,
-        tipo: "comercial",
+        tipo: "oficina",
         habitaciones: 0,
         banos: 2,
         area: 150,
@@ -132,10 +139,10 @@ const propiedades = [
     },
     {
         id: 6,
-        titulo: "Apartamento Familiar",
+        titulo: "Propiedades Rurales - 601",
         ubicacion: "choloma",
         precio: 65000,
-        tipo: "apartamento",
+        tipo: "rural",
         habitaciones: 3,
         banos: 2,
         area: 95,
@@ -240,7 +247,9 @@ function crearTarjetaPropiedad(propiedad) {
         'casa': 'Casa',
         'apartamento': 'Apartamento',
         'terreno': 'Terreno',
-        'comercial': 'Comercial'
+        'playa': 'Casa de Playa',
+        'oficina': 'Oficinas',
+        'rural': 'Propiedad Rural'
     };
     
     card.innerHTML = `
